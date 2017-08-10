@@ -1,0 +1,11 @@
+commit 04837369411dcc5e4dc10e49a7bfbd5bd46d2d6c
+Author: Gabo Huertas <gabriel970826@gmail.com>
+Date:   Thu Aug 10 14:23:59 2017 -0500
+
+    First commit. Added requeriments file.
+
+commit 5e0c6517cf70ef03c85e98ad5f02ca6ebe23bd54
+Author: GaboH97 <gabriel970826@gmail.com>
+Date:   Thu Aug 10 14:03:49 2017 -0500
+
+    Initial commit
