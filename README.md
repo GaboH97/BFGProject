@@ -1,8 +1,8 @@
 # BFGProject
 Body Fitness Gym Project
 
-INTEGRANTES
+Integrantes
 
-GABRIEL RICARDO AMAYA HUERTAS
-CESAR NICOLÁS CARDOZO RINCÓN
-JUAN DIEGO MOLINA
+Gabriel Ricardo Amaya Huertas
+Cesar Nicolás Cardozo Rincón
+Juan Diego Molina 
