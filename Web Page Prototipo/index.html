@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/master.css">
+    <script src="https://use.fontawesome.com/3d913c4b5a.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendor.js">
+
+    </script>
+    <title>Hibernate</title>
+  </head>
+  <body>
+    <div class="content">
+      <aside>
+      <div class="menu">
+        <h1>Pick one</h1>
+            <li><a class="fa fa-user" aria-hidden="true"><span class="addText">Students</span></a></li>
+            <li><a class="fa fa-heartbeat" aria-hidden="true"><span class="addText">Program</span></a></li>
+            <li><a class="fa fa-calendar" aria-hidden="true"><span class="addText">Schedule</span></a></li>
+            <li><a class="fa fa-globe" aria-hidden="true"><span class="addText">Cities</span></a></li>
+        </div>
+      </aside>
+      <section>
+        <header>
+          <h1 id="lbCurrent">Current</h1>
+        </header>
+        <nav>
+          <div class="nav1 ">
+              <li id="add" class="blue" style="background-color: rgba(63,133,244,0.8);"><a class="fa fa-plus" aria-hidden="true"><span class="addText">Add</span></a></li>
+              <li id="del" class="red" ><a class="fa fa-minus-circle" aria-hidden="true"><span class="addText">Del</span></a></li>
+              <li id="edit" class="green" style="background-color: rgb(35,188,71);"><a class="fa fa-pencil" aria-hidden="true"><span class="addText">Edit</span></a></li>
+          </div>
+          <div class="nav2">
+            <form action="">
+              <input type="search" name="" value="" placeholder="Search">
+            </form>
+            <li><a class="fa fa-search" aria-hidden="true"><span class="addText">Search</span></a></li>
+          </div>
+        </nav>
+        <div class="tablas" id="tablas">
+          <table>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>Ernst Handel</td>
+              <td>Roland Mendel</td>
+              <td>Austria</td>
+            </tr>
+            <tr>
+              <td>Island Trading</td>
+              <td>Helen Bennett</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Laughing Bacchus Winecellars</td>
+              <td>Yoshi Tannamuri</td>
+              <td>Canada</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <div class="modal" id="dialog">
+        <div class="modal-content">
+          <span id="close" class="close">&times;</span>
+            <div class="title-form">
+              <h3>Add Student</h3>
+            </div>
+          <form class="" action="index.html" method="post">
+            <div class="info">
+              <label class="show" for="name" id="id-tx">id:</label><br>
+              <input class="show" type="text" id="id-input" /><br>
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" /><br>
+              <label for="mail">Mail:</label><br>
+              <input type="email" id="mail" /><br>
+              <label for="password">Password:</label><br>
+              <input type="password" id="password" /><br>
+            </div>
+            <div class="actions">
+              <select name="combobox">
+                <option value="A">Ciudad A</option>
+                <option value="B">Ciudad B</option>
+                <option value="C">Ciudad C</option>
+                <option value="-">Other</option>
+              </select>
+              <input class="btn green" type="submit" name="add" value="Add"style="background-color: rgba(63,133,244,0.8);">
+              <button class="btn red" type="button" name="button">Cancel</button>
+            </div>
+          </form>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
