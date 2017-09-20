@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/Insanity.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/Steps.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/Dance.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/Yoga.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/run/Test.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/factories/DanceStyleFactory.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/factories/ProgramAbstractFactory.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/BodyBuilding.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/factories/StrenghTranningFactory.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/Program.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/Aerobics.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/Crossfit.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/Zumba.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/StrenghTranning.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/factories/AerobicsFactory.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/Rumba.java</file>
+            <file>file:/C:/Users/srfeu/Desktop/ProgramasAbstractFactory/src/products/Utils.java</file>
+        </group>
+    </open-files>
+</project-private>
