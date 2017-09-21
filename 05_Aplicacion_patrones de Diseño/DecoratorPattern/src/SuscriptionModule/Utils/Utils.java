@@ -40,7 +40,7 @@ public class Utils {
     public static final String TWO_MONTH_MP_NAME = "Membresia por dos meses";
     public static final String THREE_MONTH_MP_NAME = "Membresia por tres meses";
     public static final String SIX_MONTH_MP_NAME = "Membresia por seis meses";
-    public static final String ONE_YEAR_MP_NAME = "Membresia por un año"
+    public static final String ONE_YEAR_MP_NAME = "Membresia por un año";
     public static final String MONTHLY_SUSCRIPTION_NAME = "Mensual";
     //_____________________________________________________________________________________
     //ratios de conversion para aplicar descuentos a los diferentes paquetes de meses que se pueden adquirir
