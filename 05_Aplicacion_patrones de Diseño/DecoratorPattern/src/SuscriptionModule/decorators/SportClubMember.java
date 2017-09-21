@@ -7,7 +7,10 @@ import java.math.RoundingMode;
 
 /**
  *
- * @author Cesar Cardozo
+ * @author Cesar Cardozo, Gabriel Amaya
+ * Description: describe una modificacion a un tipo de suscripcion en la que el intere
+ * sado en suscribirse pertenese a algun club deportivo, lo que le da un descuento en
+ * el precio final dictado deacuerdo al ratio de descuento para un miembro de club deportivo
  */
 public class SportClubMember extends Decorator {
 
@@ -22,6 +25,6 @@ public class SportClubMember extends Decorator {
 
     @Override
     public BigDecimal getPrice() {
-        return (super.getPrice().multiply(Utils.SPORT_CLUB_MEMBER_RATIO)).setScale(1, RoundingMode.HALF_UP);
+        return (super.getPrice().multiply(Utils.SPORT_CLUB_MEMBER_RATIO)).setScale(1, RoundingMode.HALF_UP);//redondea el resultado si la parte decimal es mayor a 0.5
     }
 }
