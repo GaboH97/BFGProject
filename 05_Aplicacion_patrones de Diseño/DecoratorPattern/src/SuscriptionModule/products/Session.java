@@ -6,7 +6,8 @@ import java.math.BigDecimal;
 /**
  *
  * @author Cesar Cardozo, Gabriel Amaya
- * clase concreta de un producto sesion que describe una sesion de ejercicio y su costo
+ * Descripción:clase concreta que extiende de la clase padre Suscription la cual tiene por herencia acceso a
+                los métodos de la interfaz IsuscriptionData y los implementa
  */
 public class Session extends Suscription{
 
