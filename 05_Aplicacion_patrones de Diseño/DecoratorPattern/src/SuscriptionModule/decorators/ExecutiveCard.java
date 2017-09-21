@@ -7,10 +7,18 @@ import java.math.RoundingMode;
 
 /**
  *
- * @author Cesar Cardozo
+ * @author Cesar Cardozo, Gabriel Amaya
+ * Description: realizacion de una clase decorator para una tarjeta ejecutiva
+ * que sera la agrupacion de diferentes sessiones en paquetes para disminuir
+ * su precio.
  */
 public class ExecutiveCard extends Decorator {
 
+    /**
+    *
+    * dictara el numero de sesiones que tendra la tarjeta ejecutiva, esta podra ser
+    * de 5, 10, 15, 20, 30.
+    */
     private int sessionAmount;
 
     public ExecutiveCard(ISuscriptionData isuscriptionM, int sessionAmount) {
@@ -18,6 +26,11 @@ public class ExecutiveCard extends Decorator {
         this.sessionAmount = sessionAmount;
     }
 
+    /**
+    *
+    * @return: retorna el nombre de la tarjeta ejecutiva deacuerdo a al numero de 
+    * sesiones introducido, deacuerdo al atrib sessionAmount.
+    */
     @Override
     public String getName() {
         switch (sessionAmount) {
@@ -35,7 +48,12 @@ public class ExecutiveCard extends Decorator {
                 return Utils.ERROR_MESSAGE;
         }
     }
-
+    
+     /**
+    *
+    * @return: retorna la descripcion de la tarjeta ejecutiva deacuerdo a al numero de 
+    * sesiones introducido, deacuerdo al atrib sessionAmount.
+    */
     @Override
     public String getDescription() {
         switch (sessionAmount) {
@@ -54,6 +72,13 @@ public class ExecutiveCard extends Decorator {
         }
     }
 
+    /**
+    *
+    * @return: retorna el precio de la tarjeta ejecutiva deacuerdo a al numero de 
+    * sesiones introducido, al precio base de una sesion se le multiplica por el
+    * ratio de conversion dictado por el tipo de tarjeta y se multiplica por el 
+    * numero de sesiones introducido
+    */
     @Override
     public BigDecimal getPrice() {
         BigDecimal bd = super.getPrice();
