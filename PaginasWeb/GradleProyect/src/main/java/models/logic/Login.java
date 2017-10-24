@@ -1,4 +1,4 @@
-package login;
+package models.logic;
 
 import java.io.IOException;
 import java.io.PrintWriter;

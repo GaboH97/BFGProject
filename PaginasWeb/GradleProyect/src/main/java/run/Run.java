@@ -8,6 +8,5 @@ public class Run {
 //		Manager mng= new Manager();
 //		mng.addTestUsers();
 //		mng.printTable();
-		System.out.println(" where name = ");
 	}
 }
