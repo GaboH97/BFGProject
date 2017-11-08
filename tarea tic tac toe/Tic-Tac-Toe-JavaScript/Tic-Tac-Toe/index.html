@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>My Tic-Tac-Toe </title>
+  <link rel='stylesheet' type='text/css' href='styles/ui.css'>
+</head>
+<body>
+  <div class='main-container'>
+    <div class='title'>My Tic-Tac-Toe</div>
+
+    <div class='board invisible'>
+      <!-- data-indx following cell divs represents cell index in 1D array representation -->
+      <div class='cell' data-indx="0" id="cell1"></div>
+      <div class='cell' data-indx="1" id="cell2"></div>
+      <div class='cell' data-indx="2" id="cell3"></div>
+      <div class='cell' data-indx="3" id="cell4"></div>
+      <div class='cell' data-indx="4" id="cell5"></div>
+      <div class='cell' data-indx="5" id="cell6"></div>
+      <div class='cell' data-indx="6" id="cell7"></div>
+      <div class='cell' data-indx="7" id="cell8"></div>
+      <div class='cell' data-indx="8" id="cell9"></div>
+    </div>
+
+    <!-- div.intial displays the starting controls -->
+    <div class='control'>
+      <div class='gameModes'>
+        <div class="gameModeInfo not-selected" id="Single">
+          <div class="mode"><img src=player-vs-pc.png alt=""></div>
+          <div class="modeText">Single</div>
+        </div>
+        <div class="gameModeInfo not-selected" id="twoPlayer">
+          <div class="playervsplayer mode"><img src=player-vs-player.png alt=""></div>
+          <div class="modeText">2-Player</div>
+        </div>
+      </div>
+      <div class='start'> Start </div>
+    </div>
+
+    <div class="popup-wrap">
+      <div class="popup-box">
+        <h2 id="result"></h2>
+        <a class="close-btn popup-close" href="#">x</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="scripts/jquery-1.10.1.min.js"></script>
+  <script src="scripts/controller.js"></script>
+  <script src="scripts/gui.js"></script>
+  <script src="scripts/ticTacToe.js"></script>
+  <script src="scripts/result.js"></script>
+</body>
+
+</html>
