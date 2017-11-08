@@ -20,7 +20,7 @@ public class Login extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		Manager manager = Manager.getInstance();
 		PrintWriter pw=response.getWriter();
 		response.setContentType("text/html");
 		 

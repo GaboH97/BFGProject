@@ -12,8 +12,17 @@ public class Manager {
 	private org.hibernate.Session sessionHibernate;
 	private Transaction tx;
 	List<SystemUser> users;
+	
+	private static Manager managerInstance;
 
-	public Manager() {
+	public static Manager getInstance() {
+		if(managerInstance==null) {
+			managerInstance = new Manager();
+		}
+		return managerInstance;
+	}
+	
+	private Manager() {
 		sessionHibernate = HibernateUtil.getSessionFactory().openSession();
 		users = new ArrayList<>();
 		loadUsers();
