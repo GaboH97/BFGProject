@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejemplo nuevos controles</title>
+</head>
+<body>
+    <form action="http://localhost:8181/transaction" method="post" oninput="range_control_value.value =range_control.valueAsNumber">
+        <p>
+           Identificacion: <input type="text" name="id" autofocus required />
+            <br />
+            tipo: <input type="text" name="tipo" autofocus required />
+            <br />
+            fecha: <input type="date" name="date" autofocus required />
+            <br />
+            valor: <input type="number" name="value" required />
+            <br />
+            descripcion: <input type="text" name="description" autofocus required />
+            <br />
+	    <input type="submit" value="Submit!" /
+        </p>
+    </form>
+</body>
+</html>
