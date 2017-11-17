@@ -29,12 +29,14 @@ public class SparkManager {
                 req.queryParams("phone"),
                 req.queryParams("email"),
                 req.queryParams("img")), JsonUtil.json());
-        post("/trainner", (req, res) -> mn.createTrainner(req.queryParams("id"),
+        post("/trainner", (req, res) -> {
+            System.out.println("body; "+req.scheme());
+            return mn.createTrainner(req.queryParams("id"),
                 req.queryParams("name"),
                 req.queryParams("phone"),
                 req.queryParams("email"),
                 req.queryParams("img"),
-                req.queryParams("programs")), JsonUtil.json());
+                req.queryParams("programs"));}, JsonUtil.json());
         post("/transaction", (req, res) -> mn.createMovement(req.queryParams("id"),
                 req.queryParams("tipo"),
                 req.queryParams("date"),

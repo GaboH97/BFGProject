@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import models.Movements;
@@ -45,14 +46,19 @@ public class Manager {
      *
      * @param user
      */
-    public void addTrainner(Trainners trainner) {
-        saveHibernate(trainner);
+    public boolean addTrainner(Trainners trainner) {
+        return saveHibernate(trainner);
     }
 
-    public Trainners createTrainner(String id, String name, String phone, String eMail, String imgUrl, String programs) {
+    public String createTrainner(String id, String name, String phone, String eMail, String imgUrl, String programs) {
         Trainners tn = new Trainners(id, name, phone, eMail, imgUrl, programs);
-        addTrainner(tn);
-        return tn;
+        System.out.println(tn.toString());
+        if (addTrainner(tn)) {
+            return "ok";
+        } else {
+            return "Ya existe un Trainer con esa identificacion";
+
+        }
     }
 
     /**
@@ -84,42 +90,44 @@ public class Manager {
      * @param object A raw object to be persisted in the DB
      * @throws Exception when any of the steps during the transaction fails
      */
-    public void saveHibernate(Object object) {
+    public boolean saveHibernate(Object object) {
         try {
             sessionHibernate = HibernateUtil.getSessionFactory().openSession();
             tx = sessionHibernate.beginTransaction();
             sessionHibernate.save(object);
             tx.commit();
             sessionHibernate.close();
+            return true;
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println(e.getMessage());
+            return false;
         }
     }
 
     public List<Students> getAllStudents() {
         sessionHibernate = HibernateUtil.getSessionFactory().openSession();
-        List<Students> list = sessionHibernate.createQuery("from students").list();
+        List<Students> list = sessionHibernate.createQuery("from " + Students.class.getName()).list();
         sessionHibernate.close();
         return list;
     }
 
     public List<Trainners> getAllTrainners() {
         sessionHibernate = HibernateUtil.getSessionFactory().openSession();
-        List<Trainners> list = sessionHibernate.createQuery("from trainners").list();
+        List<Trainners> list = sessionHibernate.createQuery("from " + Trainners.class.getName()).list();
         sessionHibernate.close();
         return list;
     }
 
     public List<Movements> getAllMovements() {
         sessionHibernate = HibernateUtil.getSessionFactory().openSession();
-        List<Movements> list = sessionHibernate.createQuery("from movements").list();
+        List<Movements> list = sessionHibernate.createQuery("from " + Movements.class.getName()).list();
         sessionHibernate.close();
         return list;
     }
 
     public static void main(String[] args) {
         Manager mn = new Manager();
-//        mn.addStudent(new Students("1234323", "name", "phone", "eMail", "imgURL"));
-        mn.getAllMovements();
+        //mn.addTrainner(new Trainners("122334343", "Jose sasa dain", "237327232247", "joseNos@has.com", "https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAANEAAAAJDM4ZGM1ZGZhLTYzODgtNGY4Ny04YjZmLTQwYjRlNGVmMDc3ZA.jpg","Spining"));
+        System.err.println(mn.getAllMovements().get(0).getDescription());
     }
 }
