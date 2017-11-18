@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>Ejemplo nuevos controles</title>
-</head>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="apple-touch-icon" href="apple-touch-icon.png">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+      <link rel="stylesheet" href="css/main.css">
+  </head>
 <body>
-    <form action="http://localhost:8181/transaction" method="post" oninput="range_control_value.value =range_control.valueAsNumber">
+  <div class="col-md-12-info" id="alert">
+
+  </div>
+  <form id="form-movement"  role="form" class="form-horizontal">
         <p>
            Identificacion: <input type="text" name="id" autofocus required />
             <br />
@@ -17,8 +24,12 @@
             <br />
             descripcion: <input type="text" name="description" autofocus required />
             <br />
-	    <input type="submit" value="Submit!" /
+	    <input type="submit" class="btn btn-primary" value="Submit!" id="add-movement" />
         </p>
     </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>

@@ -18,9 +18,9 @@ public class TestSpark {
         Movements mv = new Movements(123, "tipo", Calendar.getInstance().getTime(), BigDecimal.ONE, "description");
         Trainners tn = new Trainners("identification", "name", "phone", "eMail", "imgURL", "programs");
         Manager manager = new Manager();
-        manager.addStudent(student);
-        manager.addTrainner(tn);
-        manager.addMovement(mv);
+//        manager.addStudent(student);
+//        manager.addTrainner(tn);
+//        manager.addMovement(mv);
     }
     
 }

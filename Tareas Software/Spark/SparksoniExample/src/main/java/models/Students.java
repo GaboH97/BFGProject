@@ -71,6 +71,8 @@ public class Students {
         this.imgURL = imgURL;
     }
 
-    
-    
+    @Override
+    public String toString() {
+        return "Students{" + "identification=" + identification + ", name=" + name + ", phone=" + phone + ", eMail=" + eMail + ", imgURL=" + imgURL + '}';
+    } 
 }

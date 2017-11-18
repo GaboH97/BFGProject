@@ -80,10 +80,4 @@ public class Trainners {
     public void setPrograms(String programs) {
         this.programs = programs;
     }
-
-    @Override
-    public String toString() {
-        return "Trainners{" + "identification=" + identification + ", name=" + name + ", phone=" + phone + ", eMail=" + eMail + ", imgURL=" + imgURL + ", programs=" + programs + '}';
-    }
-    
 }
