@@ -160,7 +160,7 @@ $('#add-movement').on('click',function(e){
              var bodyTable='';
               for (var i = 0; i < data.length; i++) {
                  var element = data[i];
-                 bodyTable+='<tr><th>'+element.id+'</th><td>'+element.tipo+'</td><td>'+element.movement_date+'</td><td>'+element.value+'</td><td>'+element.value +'</tr>';
+                 bodyTable+='<tr><th>'+element.id+'</th><td>'+element.tipo+'</td><td>'+element.movement_date+'</td><td>'+element.value+'</td><td>'+element.description +'</tr>';
              }
              $('#table').append(bodyTable);
              $('#title').html('');
