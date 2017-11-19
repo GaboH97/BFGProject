@@ -2,14 +2,14 @@ package test;
 
 import java.math.BigDecimal;
 import java.util.Calendar;
-import models.Logic.Manager;
-import models.Movements;
-import models.Students;
-import models.Trainners;
+import models.dao.Manager;
+import models.entity.Movements;
+import models.entity.Students;
+import models.entity.Trainners;
 
 /**
  *
- * @author Cesar Cardozo
+ * @author Gabriel Huertas, Juan Molina, Cesar Cardozo
  */
 public class TestSpark {
 

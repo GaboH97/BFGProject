@@ -1,4 +1,4 @@
-package models;
+package models.entity;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -7,21 +7,25 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
+ * POJO class that represents a student
  *
- * @author Cesar Cardozo
+ * @author Gabriel Huertas, Juan Molina, Cesar Cardozo
  */
-
 @Entity
 @Table(name = "MOVEMENTS")
 public class Movements {
-
+    
+    //===============Attributes===============
+    
     @Id
     private int id;
     private String tipo;
     private Date movement_date;
     private BigDecimal value;
     private String description;
-
+    
+    //===============Constructors=============
+    
     public Movements() {
     }
 
@@ -32,7 +36,9 @@ public class Movements {
         this.value = value;
         this.description = description;
     }
-
+    
+    //============Getters & Setters===========
+    
     public int getId() {
         return id;
     }

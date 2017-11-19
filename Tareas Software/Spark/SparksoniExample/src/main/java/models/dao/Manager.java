@@ -1,53 +1,72 @@
-package models.Logic;
+package models.dao;
 
 import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import models.Movements;
-import models.Students;
-import models.Trainners;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import models.entity.Movements;
+import models.entity.Students;
+import models.entity.Trainners;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import persistence.HibernateUtil;
 
 /**
  *
- * @author Cesar Cardozo
+ * @author Gabriel Huertas, Juan Molina, Cesar Cardozo
  */
 public class Manager {
 
+    //==================Attributes======================
+    
     private Session sessionHibernate;
     private Transaction tx;
-
+    
+    //=================Constructors=====================
+    
     public Manager() {
     }
-
+    
+    //================Methods====================
     /**
      * Adds persistent student data to the DBMS
      *
-     * @param user
+     * @param student
+     * @throws java.lang.Exception
      */
     public void addStudent(Students student) throws Exception {
         saveHibernate(student);
     }
-
+    
+    /**
+     * 
+     * @param id
+     * @param name
+     * @param phone
+     * @param eMail
+     * @param imgUrl
+     * @return A message representing success/failure when adding a new student
+     */
     public String createStudent(String id, String name, String phone, String eMail, String imgUrl) {
         Students st = new Students(id, name, phone, eMail, imgUrl);
         try {
             addStudent(st);
-            return "ok";
+            return "Student added sucessfully";
         } catch (Exception e) {
-            return "no";
+            return "Couldn't add Student, please retry";
         }
     }
 
     /**
      * Adds persistent trainner data to the DBMS
      *
-     * @param user
+     * @param trainner
+     * @throws java.lang.Exception
      */
     public void addTrainner(Trainners trainner) throws Exception {
         saveHibernate(trainner);
@@ -57,37 +76,51 @@ public class Manager {
         Trainners tn = new Trainners(id, name, phone, eMail, imgUrl, programs);
         try {
             addTrainner(tn);
-            return "ok";
+            return "Trainner Added Sucessfully";
         } catch (Exception e) {
-            return "no";
+            return "Couldn't add trainner, please retry";
         }
     }
 
     /**
      * Adds persistent Movement data to the DBMS
      *
-     * @param user
+     * @param movement
+     * @throws java.lang.Exception
      */
-    public void addMovement(models.Movements movement) throws Exception {
+    public void addMovement(Movements movement) throws Exception {
         saveHibernate(movement);
     }
-
-    public String createMovement(String id, String tipo, String movement_date, String value, String description) {
+    
+    /**
+     * 
+     * @param id                Movement identificator
+     * @param tipo              Movement type: Income/Expense
+     * @param movement_date     The date in which the movement was done
+     * @param amount            The amount in monetary units  
+     * @param description       Some description to append to the movement (not required)
+     * @return A message representing success/failure when adding a new movement
+     */
+    public String createMovement(String id, String tipo, String movement_date, String amount, String description) {
         int idInt = Integer.parseInt(id);
-        DateFormat dateFormated = new SimpleDateFormat("yyyy-MM-dd");
-        Date datefromDateFormated;
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date date;
         try {
-            datefromDateFormated = dateFormated.parse(movement_date);
-        } catch (ParseException ex) {
-            datefromDateFormated = new Date(1999, 12, 31);
-        }
-        BigDecimal valueBigDecimal = new BigDecimal(value);
-        Movements mv = new Movements(idInt, tipo, datefromDateFormated, valueBigDecimal, description);
-        try {
+            date = formatter.parse(movement_date);
+            BigDecimal valueBigDecimal = new BigDecimal(amount);
+            Movements mv = new Movements(idInt, tipo, date, valueBigDecimal, description);
             addMovement(mv);
-            return "ok";
+        } catch (ParseException ex) {
+            date = Calendar.getInstance().getTime();
+        } catch (Exception ex) {
+            Logger.getLogger(Manager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        try {
+            
+            return "Movement added successfully";
         } catch (Exception e) {
-            return "no";
+            return "Couldn't save movement, please, retry";
         }
     }
 
@@ -103,31 +136,38 @@ public class Manager {
         tx.commit();
         sessionHibernate.close();
     }
-
+    
+    /**
+     * 
+     * @return A list of existing students in the DB 
+     */
     public List<Students> getAllStudents() {
         sessionHibernate = HibernateUtil.getSessionFactory().openSession();
         List<Students> list = sessionHibernate.createQuery("from " + Students.class.getName()).list();
         sessionHibernate.close();
         return list;
     }
-
+    
+    /**
+     * 
+     * @return A list of existing trainners in the DB 
+     */
     public List<Trainners> getAllTrainners() {
         sessionHibernate = HibernateUtil.getSessionFactory().openSession();
         List<Trainners> list = sessionHibernate.createQuery("from " + Trainners.class.getName()).list();
         sessionHibernate.close();
         return list;
     }
-
+    
+    /**
+     * 
+     * @return A list of existing movements in the DB 
+     */
     public List<Movements> getAllMovements() {
         sessionHibernate = HibernateUtil.getSessionFactory().openSession();
         List<Movements> list = sessionHibernate.createQuery("from " + Movements.class.getName()).list();
         sessionHibernate.close();
         return list;
     }
-
-    public static void main(String[] args) {
-        Manager mn = new Manager();
-//        mn.addStudent(new Students("1234323", "name", "phone", "eMail", "imgURL"));
-        mn.getAllMovements();
-    }
 }
+

@@ -10,9 +10,9 @@
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
 		
-        <mapping class="models.Students"/>
-        <mapping class="models.Trainners"/>
-        <mapping class="models.Movements"/>
+        <mapping class="models.entity.Students"/>
+        <mapping class="models.entity.Trainners"/>
+        <mapping class="models.entity.Movements"/>
 
     </session-factory>
 </hibernate-configuration>

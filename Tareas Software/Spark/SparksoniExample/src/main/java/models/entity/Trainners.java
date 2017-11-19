@@ -1,17 +1,20 @@
-package models;
+package models.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- *
- * @author Yo nomas
+ *  POJO class that represents a trainner
+ * 
+ * @author Gabriel Huertas, Juan Molina, Cesar Cardozo
  */
 @Entity
-@Table(name = "STUDENTS")
+@Table(name = "TRAINNERS")
 
-public class Students {
+public class Trainners {
+    
+    //===============Attributes===============
     
     @Id
     private String identification;
@@ -19,18 +22,24 @@ public class Students {
     private String phone;
     private String eMail;
     private String imgURL;
-
-    public Students() {
+    private String programs;
+    
+    //===============Constructors=============
+    
+    public Trainners() {
     }
 
-    public Students(String identification, String name, String phone, String eMail, String imgURL) {
+    public Trainners(String identification, String name, String phone, String eMail, String imgURL, String programs) {
         this.identification = identification;
         this.name = name;
         this.phone = phone;
         this.eMail = eMail;
         this.imgURL = imgURL;
+        this.programs = programs;
     }
-
+    
+    //============Getters & Setters===========
+    
     public String getIdentification() {
         return identification;
     }
@@ -71,8 +80,11 @@ public class Students {
         this.imgURL = imgURL;
     }
 
-    @Override
-    public String toString() {
-        return "Students{" + "identification=" + identification + ", name=" + name + ", phone=" + phone + ", eMail=" + eMail + ", imgURL=" + imgURL + '}';
-    } 
+    public String getPrograms() {
+        return programs;
+    }
+
+    public void setPrograms(String programs) {
+        this.programs = programs;
+    }
 }

@@ -1,25 +1,30 @@
-package models;
+package test;
 
 import static spark.Spark.*;
 import com.google.gson.Gson;
-import models.Logic.Manager;
+import models.dao.Manager;
 import persistence.JsonUtil;
-import spark.Request;
-import spark.Response;
 
 /**
- *
- * @author Cesar Cardozo
+ * This class handles incoming requests from a server using Spark Framework
+ * using GET and POST methods for querying and adding data from the DB which
+ * response is in JSON format.
+ * 
+ * @author Gabriel Huertas, Juan Molina, Cesar Cardozo
  */
 public class SparkManager {
 
     public static void main(String[] args) {
+        //Set port and IP address in which Spark server will be listening
         ipAddress("localhost");
         port(8181);
-
+        
+        //Create a manager and spark manager instance, plus set spark manager
+        //response to JSON
         Manager mn = new Manager();
         SparkManager main = new SparkManager();
         main.corsFilter();
+        
         get("/students", (req, res) -> mn.getAllStudents(), JsonUtil.json());
         get("/trainners", (req, res) -> mn.getAllTrainners(), JsonUtil.json());
         get("/movements", (req, res) -> mn.getAllMovements(), JsonUtil.json());

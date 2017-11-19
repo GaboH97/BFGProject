@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 /**
  *  This class configures sessionFactory settings specified in the
- *  'hibernate.cfg.xml' file to adapt Hibernate behavior to an specific
+ *  'hibernate.cfg.xml' file to adapt Hibernate behavior for an specific
  *  set of environmental variables of the DB in use.
  * 
  * @author Juan Diego Molina, Gabriel Huertas, Cesar Cardozo
@@ -14,7 +14,7 @@ import org.hibernate.cfg.Configuration;
  */
 public class HibernateUtil {
 	
-	//============= ATTRIBUTES ==================
+    //============= ATTRIBUTES ==================
 	
     private static final SessionFactory sessionFactory;
 
