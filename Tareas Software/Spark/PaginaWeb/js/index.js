@@ -2,6 +2,15 @@ $(document).ready(function() {
   var state = "students";
   addStudents();
 
+
+  /**
+   * add - Adds a registry depending on which's current state
+   *       Default is Student
+   *
+   * @param  {type} 'click'   description
+   * @param  {type} function( description
+   * @return {type}           description
+   */
   $('#add').on('click', function() {
     if (state == 'students') {
       location.href = "add/indexStudents.html";
@@ -12,18 +21,51 @@ $(document).ready(function() {
     }
   });
 
+
+  /**
+   * btn - description
+   *
+   * @param  {type} 'click'   Action Trigger
+   * @param  {type} function( Calls function addMovements()
+   * @return {type}           -
+   */
   $('#btn-students').on('click', function() {
     addStudents();
   });
 
+
+  /**
+   * btn - description
+   *
+   * @param  {type} 'click'   Action Trigger
+   * @param  {type} function( Calls function addMovements()
+   * @return {type}           -
+   */
   $('#btn-trainers').on('click', function() {
     addTrainers();
   });
 
+
+  /**
+   * btn - description
+   *
+   * @param  {type} 'click'   Action Trigger
+   * @param  {type} function( Calls function addMovements()
+   * @return {type}           -
+   */
   $('#btn-movements').on('click', function() {
     addMovements();
   });
 
+
+  /**
+   * add - description
+   *
+   * @param  {type} 'click'    Action Trigger
+   * @param  {type} function(e Executes inner action using AJAX to
+   *                           send data via POST method
+   * @return {type}            description
+   */
   $('#add-student').on('click', function(e) {
     e.preventDefault();
     $.ajax({
@@ -49,6 +91,15 @@ $(document).ready(function() {
     });
   });
 
+
+  /**
+   * add - description
+   *
+   * @param  {type} 'click'    Action Trigger
+   * @param  {type} function(e Executes inner action using AJAX to
+   *                           send data via POST method
+   * @return {type}            description
+   */
   $('#add-trainner').on('click', function(e) {
     e.preventDefault();
     $.ajax({
@@ -74,6 +125,15 @@ $(document).ready(function() {
     });
   });
 
+
+  /**
+   * add - description
+   *
+   * @param  {type} 'click'    Action Trigger
+   * @param  {type} function(e Executes inner action using AJAX to
+   *                           send data via POST method
+   * @return {type}            description
+   */
   $('#add-movement').on('click', function(e) {
     e.preventDefault();
     $.ajax({
@@ -82,23 +142,30 @@ $(document).ready(function() {
       dataType: 'json',
       data: $('#form-movement').serializeFormJSON(),
       success: function(result) {
-        if (result == 'ok') {
+        if (result == 'Movement added successfully') {
           $("#alert").html("");
-          $("#alert").append('<div class="alert alert-success"><strong>Success!  </strong>' + result + '</div>');
+          $("#alert").append('<div class="alert alert-success"><strong>Success!</strong>' + result + '</div>');
           setTimeout(function() {
             location.href = "../index.html";
           }, 1000);
         } else {
           $("#alert").html("");
-          $("#alert").append('<div class="alert alert-danger"><strong>Danger!  </strong>' + result + '</div>');
+          $("#alert").append('<div class="alert alert-danger"><strong> Error!</strong>' + result + '</div>');
         }
       },
       error: function(er) {
-        $("#alert").append('<div class="alert alert-danger"><strong>Danger!</strong>' + er + '</div>');
+        $("#alert").append('<div class="alert alert-danger"><strong>Error</strong>' + er + '</div>');
       }
     });
   });
 
+
+  /**
+   * addStudents - Requests students data from a DB source and displays it
+   *               onto an HTML page
+   *
+   * @return {type}  description
+   */
   function addStudents() {
     $.ajax({
       url: 'http://localhost:8181/students',
@@ -118,11 +185,16 @@ $(document).ready(function() {
         $('#btn-students').addClass('active');
         $('#btn-trainers').removeClass('active');
         $('#btn-movements').removeClass('active');
-
       }
     });
   }
 
+  /**
+   * addTrainners - Requests trainners data from a DB source and displays it
+   *               onto an HTML page
+   *
+   * @return {type}  description
+   */
   function addTrainers() {
     $.ajax({
       url: 'http://localhost:8181/trainners',
@@ -147,6 +219,12 @@ $(document).ready(function() {
     });
   }
 
+  /**
+   * addMovements - Requests movements data from a DB source and displays it
+   *               onto an HTML page
+   *
+   * @return {type}  description
+   */
   function addMovements() {
     $.ajax({
       url: 'http://localhost:8181/movements',

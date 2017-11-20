@@ -1,4 +1,4 @@
-models
-models.Logic
+models.dao
+models.entity
 persistence
 test
