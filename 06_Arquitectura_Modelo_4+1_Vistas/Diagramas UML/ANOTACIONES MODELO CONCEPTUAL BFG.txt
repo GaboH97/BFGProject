@@ -1,0 +1,15 @@
+/*********************************************/
+	ANOTACIONES DIAGRAMA CONCEPTUAL
+/*********************************************/
+
+	-Usuario maneja roles en vez de crear distintas
+	 entidades
+
+	-Presentes tipo de programa y tipo de suscripción
+	 Para facilitar el crecimiento del sistema.
+         Actualmente su dominio está definido y puede 	 tomarse como atributo.
+	
+	-Cambiar nombre rompimiento programa-suscripcion
+	
+	-Transaction tiene fecha de guardado y fecha de
+	de las ediciones
