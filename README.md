@@ -13,13 +13,13 @@ VISTA LOGICA
 - [X] diagrama de clases
 - [X] diagrama de objetos NO VA
 - [X] diagrama de secuencia LISTO
-- [X]diagrama de comunicación LISTO
-- [X]diagrama de tiempo NO VA
-- [X]diagrama de base de datos ,toca si queda tiempo agregarle atributos y al documento
+- [X] diagrama de comunicación LISTO
+- [X] diagrama de tiempo NO VA
+- [X] diagrama de base de datos ,toca si queda tiempo agregarle atributos y al documento
 
 VISTA DESARROLLO
-- [X]diagrama de Componentes ,revisar con el profe
-- [X]diagrama de paquetes
+- [X] diagrama de Componentes ,revisar con el profe
+- [X] diagrama de paquetes
 
 VISTA DE PROCESO
 - [ ]diagrama de Activiades :
