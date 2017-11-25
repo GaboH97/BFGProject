@@ -22,7 +22,7 @@ VISTA DESARROLLO
 - [X] diagrama de paquetes
 
 VISTA DE PROCESO
-- [ ]diagrama de Activiades :
+- [ ] diagrama de Activiades :
 	- [X] LOGIN
 	- [ ] REGISTRAR NUEVO ALUMNO
 	- [ ] VER DETALLES ALUMNO
