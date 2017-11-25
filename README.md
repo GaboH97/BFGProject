@@ -12,8 +12,8 @@ COSAS POR HACER:
 VISTA LOGICA
 - [X] diagrama de clases
 - [X] diagrama de objetos NO VA
-- [X] diagrama de secuencia LISTO
-- [X] diagrama de comunicación LISTO
+- [X] diagrama de secuencia
+- [X] diagrama de comunicación
 - [X] diagrama de tiempo NO VA
 - [X] diagrama de base de datos ,toca si queda tiempo agregarle atributos y al documento
 
@@ -23,7 +23,7 @@ VISTA DESARROLLO
 
 VISTA DE PROCESO
 - [ ] diagrama de Activiades :
-	- [X] LOGIN
+	- [X] LOGIN: https://drive.google.com/file/d/1aAqJgGJxlDtxGkgp2Duwq0Y3133UVNxy/view?usp=sharing
 	- [ ] REGISTRAR NUEVO ALUMNO
 	- [ ] VER DETALLES ALUMNO
 	- [ ] EDITAR ALUMNO
