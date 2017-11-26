@@ -1,4 +1,4 @@
-# BFGProject
+﻿# BFGProject
 Body Fitness Gym Project
 
 Integrantes
@@ -11,10 +11,10 @@ COSAS POR HACER:
 
 VISTA LOGICA
 - [X] diagrama de clases
-- [X] diagrama de objetos NO VA
+- [X] diagrama de objetos 
 - [X] diagrama de secuencia
 - [X] diagrama de comunicación
-- [X] diagrama de tiempo NO VA
+- [X] diagrama de tiempo 
 - [X] diagrama de base de datos ,toca si queda tiempo agregarle atributos y al documento
 
 VISTA DESARROLLO
@@ -40,16 +40,16 @@ VISTA DE PROCESO
 	- [ ] ELIMINAR MOVIMIENTO
 	- [ ] FILTRAR MOVIMIENTOS
 - [ ] diagrama de interacción
-- [ ] diagrama de estados
+- [X] diagrama de estados
 
 VISTA FISICA
-- [/] diagrama de despliegue MASO
+- [X] diagrama de despliegue 
 
 VISTA DE CASOS DE USO(no copie el nombre)
 - [/] diagrama de casos de uso TOCA MIRARLOS
 
 
 NOTAS:
-- [ ] Descripcion del sistema(marco empresarial antes de las vistas) AGREGARLO
+- [X] Descripcion del sistema(marco empresarial antes de las vistas) AGREGARLO
 - [ ] Requisitos no funcionales como los atacamos. FALTA
 - [ ] Hablar de la arquitectura TOCA REVISAR
