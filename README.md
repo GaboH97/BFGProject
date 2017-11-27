@@ -1,4 +1,4 @@
-﻿# BFGProject
+# BFGProject
 Body Fitness Gym Project
 
 Integrantes
@@ -12,9 +12,17 @@ COSAS POR HACER:
 VISTA LOGICA
 - [X] diagrama de clases
 - [X] diagrama de objetos 
-- [X] diagrama de secuencia
+- [X] diagrama de secuencia:
+	- [X] ADMINISTRACIÓN ALUMNOS
+	- [X] ADMINISTRACIÓN ENTRENADORES
+	- [X] ADMINISTRACIÓN PROGRAMAS
+	- []  ADMINISTRACIÓN MOVIMIENTOS
+	- []  GENERAR INFORMES MOVIMIENTOS
 - [X] diagrama de comunicación
-- [X] diagrama de tiempo 
+	- [X] CREACION USUARIOS
+	- [X] CREACION MOVIMIENTOS
+	- [] GENERAR INFORMES MOVIMIENTOS
+- [X] diagrama de tiempo
 - [X] diagrama de base de datos ,toca si queda tiempo agregarle atributos y al documento
 
 VISTA DESARROLLO
