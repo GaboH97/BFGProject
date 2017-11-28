@@ -30,15 +30,15 @@ VISTA DESARROLLO
 - [X] diagrama de paquetes
 
 VISTA DE PROCESO
-- [ ] diagrama de Activiades :
+- [/] diagrama de Activiades :
 	- [X] LOGIN: https://drive.google.com/file/d/1aAqJgGJxlDtxGkgp2Duwq0Y3133UVNxy/view?usp=sharing
-	- [ ] REGISTRAR NUEVO ALUMNO
-	- [ ] VER DETALLES ALUMNO
-	- [ ] EDITAR ALUMNO
-	- [ ] AGREGAR SUSCRIPCION A ALUMNO
-	- [ ] ELIMINAR ALUMNO
-	- [ ] AGREGAR PROGRAMA
-	- [ ] VER DETALLES PROGRAMA
+	- [X] REGISTRAR NUEVO ALUMNO: https://drive.google.com/file/d/1K-hb5b6qmFYbFLaMAL3MJUwwFYXRiNtJ/view?usp=sharing
+	- [X] VER DETALLES ALUMNO: https://drive.google.com/file/d/1CNUn4rdhKKErQWAR1smoGV6rNZzYeCFN/view?usp=sharing
+	- [X] EDITAR ALUMNO:https://drive.google.com/file/d/1KwgdCNOa2agEXdXbIZaRYAABOnhPSnLh/view?usp=sharing
+	- [X] AGREGAR SUSCRIPCION A ALUMNO: https://drive.google.com/file/d/1rGssPdfwmHRPwhE3ncGecdjSGTcQoCtf/view?usp=sharing
+	- [X] ELIMINAR ALUMNO: https://drive.google.com/file/d/1yrngaHmS2NwIQMoOs__C-fWf8mG_ICji/view?usp=sharing
+	- [X] AGREGAR PROGRAMA:https://drive.google.com/file/d/1PrFDr1YmChqPd1g6wULatEtGGdJmOc6B/view?usp=sharing
+	- [X] VER DETALLES PROGRAMA : https://drive.google.com/file/d/1awawghUFKBE5nCKPI7IqiRl8b5bmmAKS/view?usp=sharing
 	- [ ] ELIMINAR PROGRAMA
 	- [ ] AGREGAR NUEVO ENTRENADOR
 	- [ ] VER DETALLES ENTRENADOR
